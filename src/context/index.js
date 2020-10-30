@@ -6,7 +6,7 @@ const MyContext = React.createContext();
 class MyProvider extends Component {
     state = {
         stage:1,
-        players:['Lisa','Mike','Miles'],
+        players:[],
         result:''
     }
 

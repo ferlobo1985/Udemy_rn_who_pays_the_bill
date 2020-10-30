@@ -3,13 +3,14 @@ import { Text, View, StyleSheet } from 'react-native';
 import { Button } from 'react-native-elements'
 
 import { MyContext } from '../context';
+import { MainLogo } from '../utils/tools';
 
 const StageTwo = () => {
     const context = useContext(MyContext);
 
     return(
         <>
-            <Text>Who pays the bill ?</Text>
+            <MainLogo/>
             <Text>The looser is</Text>
             <Text style={styles.loserWrapper}>
                 {context.state.result}
