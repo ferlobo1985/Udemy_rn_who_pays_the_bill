@@ -1,0 +1,12 @@
+{
+  "name": "wptbapp",
+  "displayName": "wptbapp",
+  "expo": {
+    "name": "wptbapp",
+    "slug": "wptbapp",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
