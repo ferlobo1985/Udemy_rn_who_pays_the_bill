@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import React,{ Component } from 'react';
-import { StyleSheet, View, ScrollView } from 'react-native';
+import { StyleSheet, View, ScrollView, Platform } from 'react-native';
 
 import { MyContext } from './src/context';
 
@@ -32,6 +32,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
+    marginTop: Platform.OS === 'ios' ? 80 : 30
   },
 });
 
