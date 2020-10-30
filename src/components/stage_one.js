@@ -9,6 +9,23 @@ import { MyContext } from '../context';
 const StageOne = () => {
     const context = useContext(MyContext);
 
+    const renderPlayers = () => (
+        context.state.players.map((item, idx)=>(
+            <ListItem
+                key={idx}
+                bottomDivider
+                style={{width:'100%'}}
+                onLongPress={()=> context.removePLayer(idx)}
+            >
+                <ListItem.Chevron/>
+                <ListItem.Content>
+                    <ListItem.Title>{item}</ListItem.Title>
+                </ListItem.Content>
+            </ListItem>
+        ))
+    )
+
+
     return(
         <>
             <Formik
@@ -52,8 +69,16 @@ const StageOne = () => {
                     </>
                 )}
             </Formik>
-            <View>
-                
+            <View style={{padding:20, width:'100%'}}>
+                {
+                    context.state.players && context.state.players.length > 0 ?
+                    <>
+                        <Text>List of players:</Text>
+                        {renderPlayers()}
+                    </>
+                    :
+                    null
+                }
             </View>
         </>
     )
